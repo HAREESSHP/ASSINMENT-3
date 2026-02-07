@@ -1,8 +1,10 @@
 function greet(){
     const inputField = document.getElementById('input-field');
-    const name = inputField.value;
+    const name = inputField.value.trim();
     const heading = document.querySelector('h3');
-    if(name ===""){
+    if(name === ""){
+      heading.innerText="Hello";
+    }else if(name === " "){
       heading.innerText="Hello";
     }else{
       heading.innerText=`Hello, ${name}`;
