@@ -1,7 +1,12 @@
 function greet(){
     const inputField = document.getElementById('input-field');
     const name = inputField.value;
-    document.querySelector('h3').innerText = `Hello, ${name}`;
+    const heading = document.querySelector('h3');
+    if(name ===""){
+      heading.innerText="Hello";
+    }else{
+      heading.innerText=`Hello, ${name}`;
+    }
 }
 const box1=document.getElementById('box-1');
 box1.addEventListener("click", () => {
